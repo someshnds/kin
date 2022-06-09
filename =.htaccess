@@ -1,0 +1,10 @@
+RewriteEngine On
+RewriteCond %{SERVER_PORT} 80
+RewriteRule ^(.*)$ https://kraftedinindia.com/$1 [R,L]
+RewriteRule ^(.*)$ https://kraftedinindia.com/demo/$1 [R,L]
+
+RewriteEngine on
+RewriteCond %{HTTP_HOST} ^kraftedinindia\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.kraftedinindia\.com$
+RewriteRule ^kraftedinindia$ "https\:\/\/kraftedinindia\.com\/" [R=301,L]
+
